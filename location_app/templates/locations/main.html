@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{%block tittle%}
+Calculate Distance 
+{%endblock title%}
+
+{%block content%}
+{{distance}}
+
+<hr>
+<form action="" method="POST" autocomplete="off">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>type="submit" class="btn btn-primary">confirm</button>
+</form>
+{%endblock content%}
